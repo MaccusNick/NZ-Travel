@@ -1,0 +1,30 @@
+{
+  "id": "2189390",
+  "name": "Travel",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "Travel项目图标",
+  "glyphs": [
+    {
+      "icon_id": "925062",
+      "name": "back",
+      "font_class": "back",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "1224871",
+      "name": "search",
+      "font_class": "search",
+      "unicode": "e6a4",
+      "unicode_decimal": 59044
+    },
+    {
+      "icon_id": "7357537",
+      "name": "arrow-sort down-small",
+      "font_class": "arrow-sortdown-smal",
+      "unicode": "e877",
+      "unicode_decimal": 59511
+    }
+  ]
+}
