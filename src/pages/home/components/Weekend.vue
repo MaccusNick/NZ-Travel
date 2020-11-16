@@ -2,7 +2,7 @@
     <div>
         <div class="title">Weekend Events</div>
      <ul>
-        <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+        <li class="item border-bottom" v-for="item of list" :key="item.id">
             <div class="item-img-wrapper">
                <img class="item-img" :src='item.imgUrl' />
             </div>
@@ -20,26 +20,8 @@
 <script>
 export default {
   name: 'HomeWeekend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'https://cdn.eventfinda.co.nz/uploads/events/transformed/1347609-597085-34.jpg',
-        title: 'SeePort Sunset Symphony & Fireworks',
-        desc: 'Ports of Auckland’s SeePort Festival is a three-day celebration of Auckland City’s beautiful waterfront and rich maritime heritage. '
-      }, {
-        id: '0002',
-        imgUrl: 'https://cdn.eventfinda.co.nz/uploads/events/transformed/848765-391682-34.jpg?v=2',
-        title: 'Great Kiwi Beer Festival',
-        desc: 'The Great Kiwi Beer Festival is a celebration of the brewing industry in New Zealand, hosted by industry experts, and featuring a range of more than 300 local, national and international brews.'
-      }, {
-        id: '0003',
-        imgUrl: 'https://cdn.eventfinda.co.nz/uploads/events/transformed/1401829-617470-7.jpg?v=3',
-        title: 'Street Food at Point Chev',
-        desc: 'The prefect way to kick start the weekend with great food, great music and great vibes with your local community.'
-      }
-      ]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
