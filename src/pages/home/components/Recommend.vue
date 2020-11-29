@@ -2,7 +2,11 @@
     <div>
         <div class="title">Recommend Viewpoints</div>
      <ul>
-        <li class="item border-bottom" v-for="item of list" :key="item.id">
+        <router-link tag="li"
+                     class="item border-bottom"
+                     v-for="item of list"
+                     :key="item.id"
+                     :to="'/detail/' + item.id">
                <img class="item-img" :src='item.imgUrl' />
             <div class="item-info">
                 <p class="item-title">{{item.title}}</p>
@@ -11,7 +15,7 @@
                 </p>
                 <button class="item-button">More information</button>
             </div>
-        </li>
+         </router-link>
       </ul>
     </div>
 </template>
