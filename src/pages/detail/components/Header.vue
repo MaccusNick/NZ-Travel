@@ -4,7 +4,7 @@
     <div class="iconfont header-abs-back"> &#xe609;</div>
    </router-link>
    <div class="header-fixed" v-show="!showAbs" :style="opacityStyle">
-        City
+        MIT Naguruhoe
         <router-link to="/">
         <div class="iconfont header-fixed-back">&#xe609;</div>
         </router-link>
@@ -38,6 +38,9 @@ export default {
   },
   activated () {
     window.addEventListener('scroll', this.handleScroll)
+  },
+  deactivated () {
+    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>
@@ -58,6 +61,7 @@ export default {
       color: #fff
       font-size: .4rem
     .header-fixed
+     z-index: 2
      position: fixed
      top:0
      left:0

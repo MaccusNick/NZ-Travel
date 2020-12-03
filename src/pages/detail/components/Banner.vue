@@ -1,14 +1,14 @@
 <template>
    <div>
     <div class="banner" @click="handleBannerClick">
-        <img class="banner-img" src="https://lovetotravel.fi/wp-content/uploads/2019/04/ClACcfbVAAAA1wJ-1-370x206.jpg"/>
+        <img class="banner-img" :src="bannerImg"/>
         <div class="banner-info">
-            <div class="banner-tittle">MT Ngauruhoe</div>
-            <div class="banner-number"><span class="iconfont banner-icon">&#xe61b;</span>123</div>
+            <div class="banner-tittle">{{this.sightName}}</div>
+            <div class="banner-number"><span class="iconfont banner-icon">&#xe61b;</span>{{this.bannerImgs.length}}</div>
         </div>
 
     </div>
-    <common-gallary :imgs="imgs" v-show="showGallary" @close="handleGallaryClose"></common-gallary>
+    <common-gallary :imgs="bannerImgs" v-show="showGallary" @close="handleGallaryClose"></common-gallary>
    </div>
 </template>
 
@@ -16,11 +16,14 @@
 import CommonGallary from 'common/gallary/Gallary'
 export default {
   name: 'DetailBanner',
+  props: {
+    sightName: String,
+    bannerImg: String,
+    bannerImgs: Array
+  },
   data () {
     return {
-      showGallary: false,
-      imgs: ['https://lovetotravel.fi/wp-content/uploads/2019/04/ClACcfbVAAAA1wJ-1-370x206.jpg',
-        'https://lovetotravel.fi/wp-content/uploads/2019/04/ClACcfbVAAAA1wJ-1-370x206.jpg']
+      showGallary: false
     }
   },
   methods: {
